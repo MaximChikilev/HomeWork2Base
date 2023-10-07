@@ -20,8 +20,10 @@ public class Veterinarian {
     public String toString() {
         return "I am Veterinarian. My name is :" + Name;
     }
-    public void treatment(Animal animal){
-        System.out.println("Hello, you are good "+animal.getClass());
+
+    public void treatment(Animal animal) {
+        String animalClassName = String.valueOf(animal.getClass()).substring(6);
+        System.out.println("Hello, you are good " + animalClassName);
         System.out.println(animal.getVoice());
     }
 }
